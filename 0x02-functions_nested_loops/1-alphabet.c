@@ -1,23 +1,19 @@
 #include "main.h"
+
 /**
- * main - The entry point of my program
+ * print_alphabet - prints alphabet
  *
  * Description: The program prints the alphabet in lowercase.
  *followed by a new line.
  *
  * Return: Return O if there is no error in main program
  */
-int main(void)
+void print_alphabet(void)
 {
-	int n = 0;
-	char alphabet[28] = "abcdefghijklmnopqrstuvwxyz";
-
-	while (n < 28)
-	{
-		_putchar(alphabet[n]);
-		n++;
-	}
-	_putchar('\n');
-
-	return (0);
+int n;
+for (n = 'a'; n <= 'z'; n++)
+{
+ _putchar(n);
+}
+ _putchar('\n');
 }
