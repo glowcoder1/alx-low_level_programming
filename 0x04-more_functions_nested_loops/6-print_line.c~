@@ -1,0 +1,17 @@
+#include "main.h"
+
+/**
+ * print_line - prints line
+ * Description: prints a starigt line if number is greater than 0 and a straight
+ * line
+ * Return: void
+ * @n: a number
+ */
+
+void print_line(int n)
+{
+	if (n > 0 )
+		for (n; n > 0; n--)
+			_putchar('_');
+	_putchar('\n');
+}
