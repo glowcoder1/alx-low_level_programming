@@ -18,7 +18,7 @@ int sqroot(int n, int i)
 }
 
 /**
- *sqrt_recursion - returns the natural square root of a number
+ *_sqrt_recursion - returns the natural square root of a number
  *@n: number to find the square root
  * Return: square root
  */
