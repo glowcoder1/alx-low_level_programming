@@ -1,0 +1,40 @@
+#include "main.h"
+
+/**
+ *is_prime - returns prime number of n
+ *@n: the number to check
+ *@i: the number to dividie n by
+ *Return: 0 if it is not a prime, 1 if it is a prime
+ */
+
+int is_prime(int n, int i)
+{
+	if (n == 1 || n == 2)
+	{
+		return (1);
+	}
+
+	if ((n / i && n != i) || n <= 0)
+	{
+		return (0);
+	}
+	if (i <= 10)
+	{
+		return (is_prime(n, ++i));
+	}
+
+	return (1);
+}
+
+/**
+ * is_prime_number - returns 1 if the input integer is a prime number, else 0
+ * @n: int to find its prime
+ * Return: 1 or 0
+ */
+
+int is_prime_number(int n)
+{
+	int i = 2;
+
+	return (is_prime(n, i));
+}
