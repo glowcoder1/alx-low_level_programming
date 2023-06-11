@@ -3,6 +3,7 @@
 /**
  * main - main function
  * @argc: argument count
+ * @argv: argument vector
  * Return: 0 if successful
  */
 
