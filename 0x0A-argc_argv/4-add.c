@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int sum = 0, i = 1, k = 0, l = 0;
 	char j;
 
-	for (i; i < argc; i++)
+	for (; i < argc; i++)
 	{
 		l = strlen(argv[i]);
 		k = 0;
