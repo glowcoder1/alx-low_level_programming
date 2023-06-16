@@ -4,6 +4,7 @@
  * string_nconcat - concatenates two strings
  * @s1: first string
  * @s2: second string
+ * @n: suggested number for len of s2
  * Return: NULL if function fails, else
  * ponter that points to a newly allocated space in memory which contains
  * s1 and s2
