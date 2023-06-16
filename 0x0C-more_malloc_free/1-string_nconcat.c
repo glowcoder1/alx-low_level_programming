@@ -12,33 +12,21 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int a, c;
-
 	bool b_done = false, c_done = false;
-
 	char *res;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 	for (a = 0; !b_done || !c_done; a++)
 	{
 		if (s1[a] == '\0')
-		{
 			b_done = true;
-		}
 		if (s2[a] == '\0')
-		{
 			c_done = true;
-		}
 		if (!c_done)
-		{
 			c++;
-		}
 	}
 	if (n > c)
 	{
