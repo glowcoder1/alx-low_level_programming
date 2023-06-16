@@ -12,44 +12,40 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int a, c;
-	bool b_done = false, c_done = false;
-	char *res;
+	unsigned int i = 0;
+	unsigned int s1_len = 0;
+	unsigned int s2_len = 0;
+	char *ptr;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	for (a = 0; !b_done || !c_done; a++)
+	while (s1[i] != '\0')
 	{
-		if (s1[a + 1] == '\0')
-			b_done = true;
-		if (!c_done)
-			c++;
-		if (s2[a + 1] == '\0')
-			c_done = true;
+		i++;
+		s1_len++;
 	}
-	if (n > c)
+	i = 0;
+	while (s2[i] != '\0')
 	{
-		n = c;
+		i++;
+		s2_len++;
 	}
-
-	res = malloc(a + 1);
-
-	if (res == NULL)
-	{
+	if (n > s2_len)
+		n = s2_len;
+	ptr = malloc((s1_len + n + 1) * sizeof(char));
+	if (ptr == NULL)
 		return (NULL);
+	for (i = 0; i < s1_len; i++)
+	{
+		ptr[i] = s1[i];
 	}
+	for (i = 0; i < n; i++)
+	{
+		ptr[s1_len + i] = s2[i];
+	}
+	ptr[s1_len + n] = '\0';
 
-	for (a = 0 ; s1[a] != '\0'; a++)
-	{
-		res[a] = s1[a];
-	}
-	for (c = 0; c < n; c++)
-	{
-		res[a] = s2[c];
-		a++;
-	}
-	res[a] = '\0';
-	return (res);
+	return (ptr);
 }
