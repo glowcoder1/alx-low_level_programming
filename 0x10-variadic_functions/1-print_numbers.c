@@ -27,7 +27,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		int curr = va_arg(args, int);
 
-		if ( i == n - 1)
+		if (i == n - 1)
 			printf("%d", curr);
 		else
 			printf("%d%s", curr, temp_separator);
