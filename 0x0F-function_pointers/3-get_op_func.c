@@ -17,9 +17,7 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-
-	if (s == NULL)
-		return (NULL);
+	
 	while (i < 5 && s[1] == '\0')
 	{
 		op_t curr = ops[i];
