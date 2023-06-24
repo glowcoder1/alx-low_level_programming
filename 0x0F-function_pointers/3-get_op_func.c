@@ -17,13 +17,11 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	
+
 	while (i < 5 && s[1] == '\0')
 	{
-		op_t curr = ops[i];
-
-		if (curr.op[0] == s[0])
-			return (curr.f);
+		if (ops[i].op[0] == s[0])
+			return (ops[i].f);
 		i++;
 	}
 	return (NULL);
