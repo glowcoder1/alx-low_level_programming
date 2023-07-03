@@ -10,7 +10,7 @@
 size_t get_len(const list_t *h, size_t len)
 {
 	if (h == NULL)
-		return (-1);
+		return (0);
 	len++;
 	if (h->next != NULL)
 	{
