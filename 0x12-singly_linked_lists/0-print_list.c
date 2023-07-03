@@ -31,12 +31,10 @@ int print(const list_t *h, int i)
 
 size_t print_list(const list_t *h)
 {
-        int count = 0;
+	int count = 0;
+
 	if (h == NULL)
 		return (0);
-	else
-	{
-		count += print(h, count);
-	}
+	count += print(h, count);
 	return (count);
 }
