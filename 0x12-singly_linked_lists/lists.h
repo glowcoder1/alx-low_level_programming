@@ -19,6 +19,8 @@ struct list_s *next;
 } list_t;
 
 size_t print_list(const list_t *h);
+int print(const list_t *h, int i);
 size_t list_len(const list_t *h);
+size_t get_len(const list_t *h, size_t len);
 
 #endif

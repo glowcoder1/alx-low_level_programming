@@ -4,7 +4,7 @@
  * get_len - returns len of linked list
  * @h: head of list
  * @len: current len of list
- * Returns: length of list
+ * Return: length of list
  */
 
 size_t get_len(const list_t *h, size_t len)
@@ -21,9 +21,9 @@ size_t get_len(const list_t *h, size_t len)
 }
 
 /**
- * list_len:  returns the number of elements in a linked list
+ * list_len-  returns the number of elements in a linked list
  * @h: head of list
- * Returns: length
+ * Return: length
  */
 
 size_t list_len(const list_t *h)
